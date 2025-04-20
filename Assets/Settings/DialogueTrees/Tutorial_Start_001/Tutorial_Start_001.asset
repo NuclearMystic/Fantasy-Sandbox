@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2422e1aed60489b44b09d80c2f43fac0, type: 3}
+  m_Name: Tutorial_Start_001
+  m_EditorClassIdentifier: 
+  treeId: Tutorial_Start_001
+  nodes:
+  - id: Tutorial_Start_Node_001
+    text: Hey!
+    characterProfile: {fileID: 11400000, guid: d3dabae8f49bf0f41a0d510d621ed392, type: 2}
+    choices:
+    - Hello.
+    nextNodes:
+    - Tutorial_Start_Node_002
+    conditions: []
+    actions: []
+    events: []
+  - id: Tutorial_Start_Node_002
+    text: 'Wanna spar? '
+    characterProfile: {fileID: 11400000, guid: d3dabae8f49bf0f41a0d510d621ed392, type: 2}
+    choices:
+    - Yes
+    - No
+    nextNodes:
+    - Tutorial_Start_Spar_Yes
+    - Tutorial_Start_Spar_No
+    conditions: []
+    actions: []
+    events: []
+  - id: Tutorial_Start_Spar_Yes
+    text: Cool. Press R to sheath your weapons when you want to stop.
+    characterProfile: {fileID: 11400000, guid: d3dabae8f49bf0f41a0d510d621ed392, type: 2}
+    choices: []
+    nextNodes: []
+    conditions: []
+    actions: []
+    events: []
+  - id: Tutorial_Start_Spar_No
+    text: Suit yourself.
+    characterProfile: {fileID: 11400000, guid: d3dabae8f49bf0f41a0d510d621ed392, type: 2}
+    choices:
+    - '[End]'
+    nextNodes: []
+    conditions: []
+    actions: []
+    events: []

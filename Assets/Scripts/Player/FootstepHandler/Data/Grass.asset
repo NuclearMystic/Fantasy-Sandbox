@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee60a1729cfad7a4cb5d312ad1a734cc, type: 3}
+  m_Name: Grass
+  m_EditorClassIdentifier: 
+  surfaceType: 1
+  footstepClips:
+  - {fileID: 8300000, guid: 7fc5e6c562505d44a9e7004ce9cdf6de, type: 3}
+  - {fileID: 8300000, guid: 125be155916c5d548aa74659b46ec70d, type: 3}
+  - {fileID: 8300000, guid: 275c0870b72efc9428aedd1a320a7ac1, type: 3}
+  - {fileID: 8300000, guid: 68f3d8d8bb25deb4da0bb72e6b75ae80, type: 3}
+  - {fileID: 8300000, guid: c9c5a3ea91f92ac42aad87ed15e2745a, type: 3}
+  - {fileID: 8300000, guid: f0bea885b2a135c468b882014a07b09d, type: 3}
+  - {fileID: 8300000, guid: 1772a3adf6e534646a10d0783710ee23, type: 3}
+  - {fileID: 8300000, guid: 5257b20a8dee6d949b64d334bb92eabb, type: 3}
+  - {fileID: 8300000, guid: 3997f322a8a5a5f4ab37261a251adc7c, type: 3}
+  - {fileID: 8300000, guid: 092bc5d614573e04a8df1fddcde4687e, type: 3}
+  - {fileID: 8300000, guid: 2d9270b9b6664274f985c06981d54491, type: 3}
+  - {fileID: 8300000, guid: c45b40e4f49ea46489e58ef68a190906, type: 3}
+  - {fileID: 8300000, guid: e319abcbaa7c3f84c8253cdfc2fcdb59, type: 3}
+  - {fileID: 8300000, guid: 7e75a580188a34b4e8d3baa4d17830e3, type: 3}
+  - {fileID: 8300000, guid: efcb784f5ccbe2645954796f53d03626, type: 3}
