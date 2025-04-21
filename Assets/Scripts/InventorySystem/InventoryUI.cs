@@ -18,6 +18,11 @@ public class InventoryUI : MonoBehaviour
     private InventorySlotUI currentSlotUI;
     private bool isMouseOverPopup = false;
 
+    [Header("Popup Stat Display")]
+    public GameObject armorStatPanel;
+    public TMP_Text armorAmountText;
+    public Image armorIcon;
+
     private void Start()
     {
         RefreshUI();
@@ -31,13 +36,13 @@ public class InventoryUI : MonoBehaviour
             return;
         }
 
-        // Clear all existing slot objects
+        // Clear all existing slotty bois
         foreach (Transform child in inventorySlotParent)
         {
             Destroy(child.gameObject);
         }
 
-        // Recreate slots from scratch
+        // Recreate sloots
         for (int i = 0; i < Inventory.Instance.maxSlots; i++)
         {
             GameObject newSlot = Instantiate(inventorySlotPrefab, inventorySlotParent);
@@ -60,6 +65,16 @@ public class InventoryUI : MonoBehaviour
         popupItemName.text = slot.item.itemName;
         itemPopup.SetActive(true);
         itemPopup.transform.position = Input.mousePosition;
+
+        if (slot.item is EquipmentItem equip)
+        {
+            armorStatPanel.SetActive(true);
+            armorAmountText.text = ("+ " + equip.armorClass.ToString());
+        }
+        else
+        {
+            armorStatPanel.SetActive(false);
+        }
 
         useButton.onClick.RemoveAllListeners();
         useButton.onClick.AddListener(() => UseItem(slot));

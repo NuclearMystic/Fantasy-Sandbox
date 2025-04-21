@@ -1,1 +1,1 @@
-public enum InteractionType { None, Dialogue, Pickup, Activate, Inspect, Custom }
+public enum InteractionType { None, Dialogue, Pickup, Activate, Inspect, Loot, Custom }

@@ -477,15 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
   m_Name: FantasyHerbsAndPlants_VisualEnvironment
   m_EditorClassIdentifier: 
-  components:
-  - {fileID: -6887655109359630186}
-  - {fileID: -7221152502292539064}
-  - {fileID: -4213859631919875661}
-  - {fileID: -6543054007781482298}
-  - {fileID: -4117185994780665694}
-  - {fileID: 5302192179452012788}
-  - {fileID: 5723890383903451126}
-  - {fileID: 1223791594624983264}
+  components: []
 --- !u!114 &1223791594624983264
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -567,21 +559,21 @@ MonoBehaviour:
     m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.011764706, g: 0.03872317, b: 0.09411765, a: 1}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
   center:
     m_OverrideState: 1
-    m_Value: {x: 0.5, y: 0.25}
+    m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.3
+    m_Value: 0.25
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.5
     min: 0.01
     max: 1
   roundness:

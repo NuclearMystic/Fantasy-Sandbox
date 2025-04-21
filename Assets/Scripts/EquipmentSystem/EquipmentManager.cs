@@ -23,6 +23,7 @@ public class EquipmentManager : MonoBehaviour
 
     private Dictionary<EquipmentSlot, EquipmentItem> equippedItems = new();
     private Dictionary<EquipmentSlot, GameObject> spawnedPrefabs = new();
+    private Dictionary<EquipmentSlot, List<int>> hiddenIndicesPerSlot = new();
 
     public event Action<EquipmentSlot, EquipmentItem> OnEquipmentChanged;
 
@@ -81,6 +82,19 @@ public class EquipmentManager : MonoBehaviour
         spawnedPrefabs[item.slot] = spawned;
         equippedItems[item.slot] = item;
 
+        if (item.hiddenRendererIndices != null)
+        {
+            foreach (int index in item.hiddenRendererIndices)
+            {
+                if (index >= 0 && index < baseBodyRenderers.Length && baseBodyRenderers[index] != null)
+                {
+                    baseBodyRenderers[index].enabled = false;
+                }
+            }
+
+            hiddenIndicesPerSlot[item.slot] = new List<int>(item.hiddenRendererIndices);
+        }
+
         OnEquipmentChanged?.Invoke(item.slot, item);
     }
 
@@ -114,6 +128,19 @@ public class EquipmentManager : MonoBehaviour
         {
             Destroy(obj);
             spawnedPrefabs.Remove(slot);
+        }
+
+        if (hiddenIndicesPerSlot.TryGetValue(slot, out var hiddenIndices))
+        {
+            foreach (int index in hiddenIndices)
+            {
+                if (index >= 0 && index < baseBodyRenderers.Length && baseBodyRenderers[index] != null)
+                {
+                    baseBodyRenderers[index].enabled = true;
+                }
+            }
+
+            hiddenIndicesPerSlot.Remove(slot);
         }
 
         OnEquipmentChanged?.Invoke(slot, null);

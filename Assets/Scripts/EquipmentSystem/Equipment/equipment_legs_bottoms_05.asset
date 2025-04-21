@@ -17,7 +17,8 @@ MonoBehaviour:
   isStackable: 0
   maxStackSize: 1
   slot: 5
-  prefab: {fileID: 2403231971846152974, guid: aed2beaead93ba04c9ea820c4a40ca3e, type: 3}
+  prefab: {fileID: 2713698218889955292, guid: 8e8436b5fd960854a97bfc3abeb1bee9, type: 3}
   armorClass: 1
   damage: 0
   hitChance: 0
+  hiddenRendererIndices: 040000000500000007000000
