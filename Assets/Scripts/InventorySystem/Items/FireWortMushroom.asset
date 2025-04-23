@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FireWortMushroom
   m_EditorClassIdentifier: 
   itemName: Fire Wort Mushroom
-  icon: {fileID: 21300000, guid: 8bb05d54ad3b7a244b9329f8cb7649b5, type: 3}
+  icon: {fileID: 21300000, guid: 3ad5f39c945bd684491c5f8dc5805bd0, type: 3}
   isStackable: 1
   maxStackSize: 99
